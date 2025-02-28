@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Playwrite+IN:wght@100..400&family=Poppins&family=Rubik+Mono+One&family=Saira+Stencil+One&family=Slackey&family=Uncial+Antiqua&display=swap');
+
+
+
+.cursor {
+    backdrop-filter: grayscale(1);
+}
+
+.cursor.active {
+    transform: scale(4);
+}
+
+.font {
+
+    font-family: "Rubik Mono One", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.font2 {
+    font-family: "Saira Stencil One", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: larger;
+}
+
+.font3 {
+    font-family: "Uncial Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font4 {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font5 {
+    font-family: "Barrio", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.font6 {
+    font-family: "Slackey", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-shadow-xl {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}

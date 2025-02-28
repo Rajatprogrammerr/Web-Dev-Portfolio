@@ -1,0 +1,14 @@
+.tilt{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: translateX(-20%);
+    
+}
+
+.rotating-text {
+   
+    transform: rotateX(0deg) rotateY(-50deg) rotateZ(0deg); /* 3D rotation */
+    
+  }
+
+ 
