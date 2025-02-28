@@ -2,7 +2,7 @@
 
 import React from 'react';
 import html from '../assets/HTML.png';
-import css from '../assets/Css.png';
+import css from '../assets/css.png';
 import js from '../assets/Js.png';
 import reactImg from '../assets/React.png';
 import tailwind from '../assets/tailwind.png';
