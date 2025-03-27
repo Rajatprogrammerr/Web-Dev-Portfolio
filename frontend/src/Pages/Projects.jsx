@@ -69,7 +69,8 @@ const Projects = () => {
                     <img className='sm:size-12 md:size-16 size-10' src={c} alt="t" />
                     <img className='sm:size-12 md:size-16 size-10' src={s} alt="s" />
                 </div>
-                <div className='flex w-full justify-center items-center' ref={boxRef}>
+
+                <div className='flex w-full justify-center items-center ' ref={boxRef}>
                     <Swiper
                         effect={'coverflow'}
                         grabCursor={true}
@@ -119,7 +120,7 @@ const Projects = () => {
                         </SwiperSlide>
 
                         <div className="slider-controller">
-                            <div className="swiper-button-prev slider-arrow">
+                            <div className="swiper-button-prev slider-arrow ">
                                 <ArrowLeft />
                             </div>
                             <div className="swiper-button-next slider-arrow">
@@ -128,6 +129,41 @@ const Projects = () => {
                             <div className="swiper-pagination"></div>
                         </div>
                     </Swiper>
+                </div>
+
+
+                <div className='block lg:hidden mt-[300px]'>
+                    <div className='  flex justify-center items-center mb-12' ref={textRef}>
+                        {/* <h1 className='font-bold text-5xl font'>PROJECTS</h1> */}
+                        <img className='sm:size-28 md:size-32 size-20' src={p} alt="p" />
+                        <img className='sm:size-12 md:size-16 size-10' src={r} alt="r" />
+                        <img className='sm:size-12 md:size-16 size-10' src={o} alt="o" />
+                        <img className='sm:size-12 md:size-16 size-10' src={j} alt="j" />
+                        <img className='sm:size-12 md:size-16 size-10' src={e} alt="e" />
+                        <img className='sm:size-12 md:size-16 size-10' src={t} alt="c" />
+                        <img className='sm:size-12 md:size-16 size-10' src={c} alt="t" />
+                        <img className='sm:size-12 md:size-16 size-10' src={s} alt="s" />
+                    </div>
+                    <div className='flex flex-col justify-center items-center gap-10'>
+
+                        <Link to={"https://netflix-clone-mern-sm6w.onrender.com/"} target='_blank'>
+                            <img src={image_slider_1} alt="image_slider_1" className=' w-[300px] h-[200px]  cursor-pointer object-contain rounded-2xl' />
+                        </Link>
+
+                        <Link to={"https://recipe-finder-rho-five.vercel.app/"} target='_blank'>
+                            <img src={image_slider_2} alt="image_slider_2" className=' w-[300px] h-[200px]  cursor-pointer object-contain rounded-2xl' />
+                        </Link>
+
+                        <Link to={"https://youtube-clone-aqgl.onrender.com/"} target='_blank'>
+                            <img src={image_slider_3} alt="image_slider_3" className=' w-[300px] h-[200px]  cursor-pointer object-contain rounded-2xl' />
+                        </Link>
+
+                        <Link to={"https://local-store-mern.onrender.com/"} target='_blank'>
+                            <img src={image_slider_4} alt="image_slider_4" className=' w-[300px] h-[200px]  cursor-pointer object-contain rounded-2xl' />
+                        </Link>
+
+                    </div>
+
                 </div>
             </div>
 

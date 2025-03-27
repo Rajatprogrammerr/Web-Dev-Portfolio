@@ -58,7 +58,7 @@ const Skills = () => {
       </div>
 
       {/* Heading Section */}
-      <div className="absolute lg:top-[60%] md:top-[60%] top-[65%] transform -translate-y-1/2 -translate-z-2/3 flex  justify-center items-center ">
+      <div className="absolute lg:top-[60%] md:top-[60%] top-[65%] transform md:-translate-y-1/2 -translate-z-2/3 flex  justify-center items-center ">
         {/* <h1 id='box' className="font-bold text-5xl text-center font">SKILLS</h1> */}
         <img className='lg:size-16 size-10' src={s} alt="" />
         <img className='lg:size-16 size-10' src={k} alt="" />
