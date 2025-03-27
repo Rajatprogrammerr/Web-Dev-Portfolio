@@ -57,8 +57,8 @@ const Projects = () => {
     }, [])
     return (
         <>
-            <div className='w-screen h-screen flex flex-col justify-center items-center'>
-                <div className='mt-10 flex justify-center items-center' ref={textRef}>
+            <div className='w-screen h-screen flex flex-col justify-center items-center md:gap-0 gap-10'>
+                <div className='md:mt-10  flex justify-center items-center' ref={textRef}>
                     {/* <h1 className='font-bold text-5xl font'>PROJECTS</h1> */}
                     <img className='sm:size-28 md:size-32 size-20' src={p} alt="p" />
                     <img className='sm:size-12 md:size-16 size-10' src={r} alt="r" />

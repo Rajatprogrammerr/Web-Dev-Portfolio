@@ -85,8 +85,8 @@ const About = () => {
         <>
             <div ref={aboutRef} className='w-screen min-h-screen overflow-x-hidden flex justify-center items-center relative'>
                 <div className='flex flex-col gap-10 justify-center items-center'>
-                    <div className='flex flex-row  justify-center items-center gap-8'>
-                        <div className='flex justify-center gap-4 items-center'>
+                    <div className='flex flex-row lg:mt-0 mt-10 justify-center items-center gap-8'>
+                        <div className='flex justify-center  items-center'>
                             <img ref={el => letterRefs.current[0] = el} className='lg:size-44 size-20' src={a} alt="A" />
                             <img ref={el => letterRefs.current[1] = el} className='lg:size-16 size-10' src={b} alt="B" />
                             <img ref={el => letterRefs.current[2] = el} className='lg:size-16 size-10' src={o} alt="O" />

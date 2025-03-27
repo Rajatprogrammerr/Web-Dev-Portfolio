@@ -72,9 +72,9 @@ const Contactme = () => {
 
     return (
         <>
-            <div className="w-screen h-screen flex justify-center items-center flex-col p-4">
+            <div className="w-screen h-screen flex justify-center items-center flex-col p-4 ">
                 {/* Header Section */}
-                <div className="flex justify-center items-center mb-8" ref={textRef}>
+                <div className="flex justify-center items-center md:mb-8 md:mt-0 mt-36 mb-0 " ref={textRef}>
                     {/* <h1 className="font-bold text-4xl md:text-5xl text-center font">CONTACT ME</h1> */}
                     <img className='md:size-32 size-16' src={c} alt="c" />
                     <img className='md:size-16 size-10' src={o} alt="o" />
@@ -88,7 +88,7 @@ const Contactme = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-24 glass-effect p-6 rounded-lg">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-24  p-6 rounded-lg">
                     {/* Form Section */}
                     <div className="w-full md:w-[600px]">
                         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">

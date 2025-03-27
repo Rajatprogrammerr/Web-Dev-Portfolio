@@ -133,9 +133,9 @@ const Hero = () => {
                 <div className="flex md:flex-row flex-col justify-center items-center">
                     <div>
                         <div className="flex flex-col justify-center items-center">
-                            <div className="flex lg:flex-row  md:flex-col flex-col justify-center items-center md:gap-8 gap-4">
+                            <div className="flex lg:flex-row  md:flex-col flex-col mt-20 md:mt-0 justify-center items-center  ">
                                 <div className="flex justify-center items-center">
-                                    <img ref={el => frontendRefs.current[0] = el} className="md:size-44 size-20" src={f} alt="F" />
+                                    <img ref={el => frontendRefs.current[0] = el} className="md:size-44 size-14" src={f} alt="F" />
                                     <img ref={el => frontendRefs.current[1] = el} className="md:size-16 size-10" src={r} alt="R" />
                                     <img ref={el => frontendRefs.current[2] = el} className="md:size-16 size-10" src={o} alt="O" />
                                     <img ref={el => frontendRefs.current[3] = el} className="md:size-16 size-10" src={n} alt="N" />
@@ -144,7 +144,7 @@ const Hero = () => {
                                     <img ref={el => frontendRefs.current[6] = el} className="md:size-16 size-10" src={d} alt="D" />
                                 </div>
                                 <div className="flex justify-center items-center">
-                                    <img ref={el => developerRefs.current[0] = el} className="md:size-44 size-20" src={d} alt="D" />
+                                    <img ref={el => developerRefs.current[0] = el} className="md:size-44 size-10" src={d} alt="D" />
                                     <img ref={el => developerRefs.current[1] = el} className="md:size-16 size-10" src={e} alt="E" />
                                     <img ref={el => developerRefs.current[2] = el} className="md:size-16 size-10" src={v} alt="V" />
                                     <img ref={el => developerRefs.current[3] = el} className="md:size-16 size-10" src={E} alt="E" />
