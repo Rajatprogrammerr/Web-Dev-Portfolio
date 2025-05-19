@@ -17,7 +17,7 @@ import l from '../assets/L9.png';
 import O from '../assets/O3.png';
 import p from '../assets/P10.png';
 import gsap from 'gsap';
-import webDevResume from '../files/webDevResume.pdf'
+
 
 const Hero = () => {
     const frontendRefs = useRef([]);
@@ -194,11 +194,11 @@ const Hero = () => {
                                 </span>
                             </div>
                             <div ref={el => socialRefs.current[3] = el} className="relative group">
-                                <Link to={webDevResume}  download={true}>
+                                <a to="/webDevResume.pdf"  download={true}>
                                     <button className="p-2 rounded-full md:size-32 size-16" onClick={d}>
                                         <img src={resume} alt="Resume" />
                                     </button>
-                                </Link>
+                                </a>
                                 <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-lg font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     Resume
                                 </span>
