@@ -14,6 +14,9 @@ import i from '../assets/I3.png';
 import l from '../assets/L9.png';
 
 const Skills = () => {
+
+  
+
   return (
     // <div className="w-screen    h-screen flex flex-col justify-center items-center relative ">
     //   <div className="banner relative ">
@@ -31,6 +34,9 @@ const Skills = () => {
     //   <h1 className='font-bold text-5xl ' >SKILLS</h1>
     //   </div>
     // </div>
+
+
+
 
     <div className="w-screen h-screen flex flex-col justify-center items-center relative">
       {/* Banner Section */}
@@ -58,14 +64,14 @@ const Skills = () => {
       </div>
 
       {/* Heading Section */}
-      <div className="absolute lg:top-[60%] md:top-[60%] top-[65%] transform md:-translate-y-1/2 -translate-z-2/3 flex  justify-center items-center ">
+      <div  className="absolute lg:top-[60%] md:top-[60%] top-[65%] transform md:-translate-y-1/2 -translate-z-2/3 flex  justify-center items-center ">
         {/* <h1 id='box' className="font-bold text-5xl text-center font">SKILLS</h1> */}
-        <img className='lg:size-16 size-10' src={s} alt="" />
-        <img className='lg:size-16 size-10' src={k} alt="" />
-        <img className='lg:size-16 size-10' src={i} alt="" />
-        <img className='lg:size-16 size-10' src={l} alt="" />
-        <img className='lg:size-16 size-10' src={l} alt="" />
-        <img className='lg:size-16 size-10' src={s} alt="" />
+        <img  className='lg:size-16 size-10' src={s} alt="" />
+        <img  className='lg:size-16 size-10' src={k} alt="" />
+        <img  className='lg:size-16 size-10' src={i} alt="" />
+        <img  className='lg:size-16 size-10' src={l} alt="" />
+        <img  className='lg:size-16 size-10' src={l} alt="" />
+        <img  className='lg:size-16 size-10' src={s} alt="" />
       </div>
     </div>
 

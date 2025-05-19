@@ -56,6 +56,7 @@ const Contactme = () => {
 
 
     const textRef = useRef(null)
+    const letterRefs = useRef([]);
 
     useEffect(() => {
         gsap.set(textRef.current, {
@@ -68,23 +69,53 @@ const Contactme = () => {
             duration: 2,
             ease: "elastic.out(1, 0.5)",
         });
+
+        letterRefs.current.forEach((letter) => {
+            if (letter) {
+                letter.addEventListener('mouseenter', () => {
+                    gsap.to(letter, {
+                        scale: 1.2,
+                        rotation: 10,
+                        duration: 0.3
+                    });
+                });
+
+                letter.addEventListener('mouseleave', () => {
+                    gsap.to(letter, {
+                        scale: 1,
+                        rotation: 0,
+                        duration: 0.3
+                    });
+                });
+            }
+        });
+
+        // Cleanup function
+        return () => {
+            letterRefs.current.forEach((letter) => {
+                if (letter) {
+                    letter.removeEventListener('mouseenter', () => { });
+                    letter.removeEventListener('mouseleave', () => { });
+                }
+            });
+        };
     }, [])
 
     return (
         <>
             <div className="w-screen h-screen flex justify-center items-center flex-col p-4 ">
                 {/* Header Section */}
-                <div className="flex justify-center items-center md:mb-8 md:mt-0 mt-36 mb-0 " ref={textRef}>
+                <div className="flex justify-center items-center md:mb-8 md:mt-0 mt-36 mb-0  " ref={textRef}>
                     {/* <h1 className="font-bold text-4xl md:text-5xl text-center font">CONTACT ME</h1> */}
-                    <img className='md:size-32 size-16' src={c} alt="c" />
-                    <img className='md:size-16 size-10' src={o} alt="o" />
-                    <img className='md:size-16 size-10' src={n} alt="n" />
-                    <img className='md:size-16 size-10' src={t} alt="t" />
-                    <img className='md:size-16 size-10' src={a} alt="a" />
-                    <img className='md:size-16 size-10' src={c} alt="c" />
-                    <img className='md:size-16 size-10' src={t} alt="t" />
-                    <img className='md:size-32 size-10 md:ml-10 ml-4' src={m} alt="m" />
-                    <img className='md:size-16 size-10' src={e} alt="e" />
+                    <img ref={el => letterRefs.current[0] = el} className='md:size-32 size-16' src={c} alt="c" />
+                    <img ref={el => letterRefs.current[1] = el} className='md:size-16 size-10' src={o} alt="o" />
+                    <img ref={el => letterRefs.current[2] = el} className='md:size-16 size-10' src={n} alt="n" />
+                    <img ref={el => letterRefs.current[3] = el} className='md:size-16 size-10' src={t} alt="t" />
+                    <img ref={el => letterRefs.current[4] = el} className='md:size-16 size-10' src={a} alt="a" />
+                    <img ref={el => letterRefs.current[5] = el} className='md:size-16 size-10' src={c} alt="c" />
+                    <img ref={el => letterRefs.current[6] = el} className='md:size-16 size-10' src={t} alt="t" />
+                    <img ref={el => letterRefs.current[7] = el} className='md:size-32 size-10 md:ml-10 ml-4' src={m} alt="m" />
+                    <img ref={el => letterRefs.current[8] = el} className='md:size-16 size-10' src={e} alt="e" />
                 </div>
 
                 {/* Content Section */}

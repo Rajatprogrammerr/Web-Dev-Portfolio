@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import github from '../assets/github.jpg';
 import gmail from '../assets/gmail.png';
 import linkedin from '../assets/linkedin.png';
+import resume from "../assets/resume.jpeg"
 import f from '../assets/F10.png';
 import r from '../assets/R11.png';
 import o from '../assets/O10.png';
@@ -16,6 +17,7 @@ import l from '../assets/L9.png';
 import O from '../assets/O3.png';
 import p from '../assets/P10.png';
 import gsap from 'gsap';
+import webDevResume from '../files/webDevResume.pdf'
 
 const Hero = () => {
     const frontendRefs = useRef([]);
@@ -164,7 +166,7 @@ const Hero = () => {
                             <div ref={el => socialRefs.current[0] = el} className="relative group">
                                 <Link to={"https://github.com/Rajatprogrammerr"} target="_blank" >
                                     <button className="p-2 rounded-full md:size-32 size-16">
-                                        <img src={github} alt="github" className=''/>
+                                        <img src={github} alt="github" className='' />
                                     </button>
                                 </Link>
                                 <span className="absolute md:top-full top-1/2 md:left-1/2 left-1/3 transform md:-translate-x-1/2 mt-2 text-lg font-bold text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-500">
@@ -173,9 +175,9 @@ const Hero = () => {
                             </div>
                             <div ref={el => socialRefs.current[1] = el} className="relative group">
                                 <Link to={"https://mail.google.com/mail/?view=cm&to=rpurpose81@gmail.com&su=SUBJECT&body=BODY"} target='_blank'>
-                                <button className="p-2 rounded-full md:size-32 size-16">
-                                    <img src={gmail} alt="gmail" />
-                                </button>
+                                    <button className="p-2 rounded-full md:size-32 size-16">
+                                        <img src={gmail} alt="gmail" />
+                                    </button>
                                 </Link>
                                 <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-lg font-bold text-red-600 opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-500">
                                     Gmail
@@ -189,6 +191,16 @@ const Hero = () => {
                                 </Link>
                                 <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-lg font-bold text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                     Linked<span className="text-white">In</span>
+                                </span>
+                            </div>
+                            <div ref={el => socialRefs.current[3] = el} className="relative group">
+                                <Link to={webDevResume}  download={true}>
+                                    <button className="p-2 rounded-full md:size-32 size-16" onClick={d}>
+                                        <img src={resume} alt="Resume" />
+                                    </button>
+                                </Link>
+                                <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-lg font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    Resume
                                 </span>
                             </div>
                         </div>

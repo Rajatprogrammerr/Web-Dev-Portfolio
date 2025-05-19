@@ -30,10 +30,16 @@ import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 const Projects = () => {
 
     const textRef = useRef(null);
+    const text2Ref = useRef(null);
     const boxRef = useRef(null);
+    const letterRefs = useRef([]);
 
     useEffect(() => {
         gsap.set(textRef.current, {
+            opacity: 0,
+            scale: 2,
+        })
+        gsap.set(text2Ref.current, {
             opacity: 0,
             scale: 2,
         })
@@ -48,26 +54,63 @@ const Projects = () => {
             duration: 2,
             ease: "elastic.out(1, 0.5)",
         });
+        gsap.to(text2Ref.current, {
+            opacity: 1,
+            scale: 1,
+            duration: 2,
+            ease: "elastic.out(1, 0.5)",
+        });
         gsap.to(boxRef.current, {
             opacity: 1,
             duration: 4,
             y: 0,
             ease: "power3.out",
         })
+
+          // Optional: Add hover animations for letters
+        letterRefs.current.forEach((letter) => {
+            if (letter) {
+                letter.addEventListener('mouseenter', () => {
+                    gsap.to(letter, {
+                        scale: 1.2,
+                        rotation: 10,
+                        duration: 0.3
+                    });
+                });
+
+                letter.addEventListener('mouseleave', () => {
+                    gsap.to(letter, {
+                        scale: 1,
+                        rotation: 0,
+                        duration: 0.3
+                    });
+                });
+            }
+        });
+
+        // Cleanup function
+        return () => {
+            letterRefs.current.forEach((letter) => {
+                if (letter) {
+                    letter.removeEventListener('mouseenter', () => { });
+                    letter.removeEventListener('mouseleave', () => { });
+                }
+            });
+        };
     }, [])
     return (
         <>
             <div className='w-screen h-screen flex flex-col justify-center items-center md:gap-0 gap-10'>
                 <div className='md:mt-10  flex justify-center items-center' ref={textRef}>
                     {/* <h1 className='font-bold text-5xl font'>PROJECTS</h1> */}
-                    <img className='sm:size-28 md:size-32 size-20' src={p} alt="p" />
-                    <img className='sm:size-12 md:size-16 size-10' src={r} alt="r" />
-                    <img className='sm:size-12 md:size-16 size-10' src={o} alt="o" />
-                    <img className='sm:size-12 md:size-16 size-10' src={j} alt="j" />
-                    <img className='sm:size-12 md:size-16 size-10' src={e} alt="e" />
-                    <img className='sm:size-12 md:size-16 size-10' src={t} alt="c" />
-                    <img className='sm:size-12 md:size-16 size-10' src={c} alt="t" />
-                    <img className='sm:size-12 md:size-16 size-10' src={s} alt="s" />
+                    <img ref={el => letterRefs.current[0] = el} className='sm:size-28 md:size-32 size-20' src={p} alt="p" />
+                    <img ref={el => letterRefs.current[1] = el} className='sm:size-12 md:size-16 size-10' src={r} alt="r" />
+                    <img ref={el => letterRefs.current[2] = el} className='sm:size-12 md:size-16 size-10' src={o} alt="o" />
+                    <img ref={el => letterRefs.current[3] = el} className='sm:size-12 md:size-16 size-10' src={j} alt="j" />
+                    <img ref={el => letterRefs.current[4] = el} className='sm:size-12 md:size-16 size-10' src={e} alt="e" />
+                    <img ref={el => letterRefs.current[5] = el} className='sm:size-12 md:size-16 size-10' src={t} alt="c" />
+                    <img ref={el => letterRefs.current[6] = el} className='sm:size-12 md:size-16 size-10' src={c} alt="t" />
+                    <img ref={el => letterRefs.current[7] = el} className='sm:size-12 md:size-16 size-10' src={s} alt="s" />
                 </div>
 
                 <div className='flex w-full justify-center items-center ' ref={boxRef}>
@@ -133,7 +176,7 @@ const Projects = () => {
 
 
                 <div className='block lg:hidden mt-[300px]'>
-                    <div className='  flex justify-center items-center mb-12' ref={textRef}>
+                    <div className='  flex justify-center items-center mb-12' ref={text2Ref}>
                         {/* <h1 className='font-bold text-5xl font'>PROJECTS</h1> */}
                         <img className='sm:size-28 md:size-32 size-20' src={p} alt="p" />
                         <img className='sm:size-12 md:size-16 size-10' src={r} alt="r" />

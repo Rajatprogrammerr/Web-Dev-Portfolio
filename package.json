@@ -2,6 +2,7 @@
   "name": "portfolio-web-dev",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
