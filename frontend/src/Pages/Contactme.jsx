@@ -25,7 +25,7 @@ const Contactme = () => {
     const onSubmit = async (data) => {
         console.log(data);
         try {
-            const response = await fetch('http://localhost:5000/contact/', {
+            const response = await fetch('/contact/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
