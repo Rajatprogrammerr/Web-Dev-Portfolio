@@ -194,7 +194,7 @@ const Hero = () => {
                                 </span>
                             </div>
                             <div ref={el => socialRefs.current[3] = el} className="relative group">
-                                <a to="/webDevResume.pdf"  download={true}>
+                                <a href="/webDevResume.pdf"  download={true}>
                                     <button className="p-2 rounded-full md:size-32 size-16" onClick={d}>
                                         <img src={resume} alt="Resume" />
                                     </button>
